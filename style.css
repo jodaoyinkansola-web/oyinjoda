@@ -511,8 +511,12 @@ img.work-img-placeholder {
 .media-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(90,45,156,0.18); }
 .media-card-img {
   background: linear-gradient(135deg, #c09ee0, #9b67cc);
-  aspect-ratio: 16/9;
-  display: flex;
+  display: block;
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
   align-items: center;
   justify-content: center;
   color: rgba(255,255,255,0.6);
