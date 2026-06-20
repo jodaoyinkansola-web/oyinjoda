@@ -408,26 +408,52 @@ section {
   position: relative;
   max-height: 100%;
 }
+
 .work-img-stack {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 200px;
   gap: 10px;
+  width: 100%;
 }
-.work-img-placeholder {
+
+/* ALL three tiles — shared styles */
+.work-img-placeholder,
+img.work-img-placeholder {
   border-radius: 10px;
   background: linear-gradient(135deg, #c09ee0, #9b67cc);
-  aspect-ratio: 4/3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  overflow: hidden;
   color: rgba(255,255,255,0.6);
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.05em;
   text-align: center;
-  padding: 8px;
 }
-.work-img-placeholder.tall { grid-row: span 2; aspect-ratio: 3/4; }
+
+/* Tile 1 — tall image, always LEFT column, spans both rows */
+.work-img-stack :nth-child(1) {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  height: 410px;         /* (200px x 2) + 10px gap */
+}
+
+/* Tile 2 — small image, RIGHT column, TOP row */
+.work-img-stack :nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+  height: 200px;
+}
+
+/* Tile 3 — small image, RIGHT column, BOTTOM row */
+.work-img-stack :nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+  height: 200px;
+}
+
 .work-objective {
   font-size: 15px;
   line-height: 1.75;
