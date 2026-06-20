@@ -511,18 +511,13 @@ img.work-img-placeholder {
 .media-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(90,45,156,0.18); }
 .media-card-img {
   background: linear-gradient(135deg, #c09ee0, #9b67cc);
-  display: block;
-  border-radius: 10px;
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  object-position: top;
+  aspect-ratio: 16/9;
+  display: flex;
   align-items: center;
   justify-content: center;
   color: rgba(255,255,255,0.6);
   font-size: 13px;
   letter-spacing: 0.05em;
-  aspect-ratio: 3/4;
 }
 .media-card-body { padding: 28px 28px 32px; }
 .media-card-badge {
