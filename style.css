@@ -522,6 +522,7 @@ img.work-img-placeholder {
   color: rgba(255,255,255,0.6);
   font-size: 13px;
   letter-spacing: 0.05em;
+  aspect-ratio: 3/4;
 }
 .media-card-body { padding: 28px 28px 32px; }
 .media-card-badge {
