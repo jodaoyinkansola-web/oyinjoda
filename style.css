@@ -437,7 +437,8 @@ img.work-img-placeholder {
 .work-img-stack :nth-child(1) {
   grid-column: 1;
   grid-row: 1 / span 2;
-  height: 410px;         /* (200px x 2) + 10px gap */
+  height: 410px;
+  object-fit:contain;         /* (200px x 2) + 10px gap */
 }
 
 /* Tile 2 — small image, RIGHT column, TOP row */
@@ -445,6 +446,7 @@ img.work-img-placeholder {
   grid-column: 2;
   grid-row: 1;
   height: 200px;
+  object-fit:contain;
 }
 
 /* Tile 3 — small image, RIGHT column, BOTTOM row */
@@ -452,6 +454,7 @@ img.work-img-placeholder {
   grid-column: 2;
   grid-row: 2;
   height: 200px;
+  object-fit:contain;
 }
 
 .work-objective {
@@ -518,6 +521,7 @@ img.work-img-placeholder {
   color: rgba(255,255,255,0.6);
   font-size: 13px;
   letter-spacing: 0.05em;
+  object-fit: contain;
 }
 .media-card-body { padding: 28px 28px 32px; }
 .media-card-badge {
