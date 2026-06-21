@@ -438,7 +438,7 @@ img.work-img-placeholder {
   grid-column: 1;
   grid-row: 1 / span 2;
   height: 410px;
-  object-fit:contain;         /* (200px x 2) + 10px gap */
+  object-fit:cover;         /* (200px x 2) + 10px gap */
 }
 
 /* Tile 2 — small image, RIGHT column, TOP row */
