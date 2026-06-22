@@ -457,6 +457,10 @@ img.work-img-placeholder {
   object-fit:cover;
 }
 
+.work-img-agency{
+  margin: 40px 0px 0px 0px;
+}
+
 .work-objective {
   font-size: 15px;
   line-height: 1.75;
