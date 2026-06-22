@@ -606,7 +606,7 @@ img.work-img-placeholder {
 .resume-img {
   width: 100%;
   display: block;
-  border-radius: 14px;
+  border-radius: 5px;
   border-style: solid;
   border-width: 4px;
   border-color: var(--pink-border);
@@ -617,8 +617,11 @@ img.work-img-placeholder {
 .resume-download {
   display: inline-block;
   position: relative;
+  border-style: solid;
+  border-width: 4px;
+  border-color: var(--pink-border);
   margin-top: -24px; 
-  margin-left: -24px;        /* ← Negative margin pulls it UP into the card — increase to overlap more */
+  margin-left: -10px;        /* ← Negative margin pulls it UP into the card — increase to overlap more */
   z-index: 2;                /* Sits on top of the card */
   background: var(--purple-vivid);
   color: #fff;
