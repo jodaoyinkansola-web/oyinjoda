@@ -420,7 +420,7 @@ section {
 /* ALL three tiles — shared styles */
 .work-img-placeholder,
 img.work-img-placeholder {
-  border-radius: 10px;
+  border-radius: 0px;
   background: linear-gradient(135deg, #c09ee0, #9b67cc);
   width: 100%;
   height: 100%;
