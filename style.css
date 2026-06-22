@@ -610,7 +610,7 @@ img.work-img-placeholder {
   display: block;
   border-radius: 5px;
   border-style: solid;
-  border-width: 4px;
+  border-width: 2px;
   border-color: var(--pink-border);
   object-fit: cover;         /* Crops to fill without stretching */
 }
@@ -620,7 +620,7 @@ img.work-img-placeholder {
   display: inline-block;
   position: relative;
   border-style: solid;
-  border-width: 4px;
+  border-width: 2px;
   border-color: var(--pink-border);
   margin-top: -24px; 
   margin-left: -10px;        /* ← Negative margin pulls it UP into the card — increase to overlap more */
