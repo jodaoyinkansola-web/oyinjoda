@@ -608,7 +608,7 @@ img.work-img-placeholder {
   display: block;
   border-radius: 14px;
   border-style: solid;
-  border-width: 10px;
+  border-width: 5px;
   border-color: var(--purple-deep);
   object-fit: cover;         /* Crops to fill without stretching */
 }
