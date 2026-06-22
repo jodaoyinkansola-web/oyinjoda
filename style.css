@@ -424,7 +424,7 @@ img.work-img-placeholder {
   background: linear-gradient(135deg, #c09ee0, #9b67cc);
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
   overflow: hidden;
   color: rgba(255,255,255,0.6);
@@ -446,7 +446,7 @@ img.work-img-placeholder {
   grid-column: 2;
   grid-row: 1;
   height: 200px;
-  object-fit:contain;
+  object-fit:cover;
 }
 
 /* Tile 3 — small image, RIGHT column, BOTTOM row */
@@ -454,7 +454,7 @@ img.work-img-placeholder {
   grid-column: 2;
   grid-row: 2;
   height: 200px;
-  object-fit:contain;
+  object-fit:cover;
 }
 
 .work-objective {
@@ -521,7 +521,8 @@ img.work-img-placeholder {
   color: rgba(255,255,255,0.6);
   font-size: 13px;
   letter-spacing: 0.05em;
-  object-fit: contain;
+  object-fit: cover;
+  margin: -40px 0px 0px -40px;
 }
 .media-card-body { padding: 28px 28px 32px; }
 .media-card-badge {
