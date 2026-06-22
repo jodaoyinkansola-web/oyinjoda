@@ -163,6 +163,7 @@ section {
   line-height: 1.05;
   color: var(--purple-deep);
   letter-spacing: 0.2em;
+  width: 500px;
 }
 .hero-title {
   font-size: 13px;
@@ -181,6 +182,7 @@ section {
   margin-top: 10px;
   gap: 14px;
   flex-wrap: wrap;
+  width: 500px;
 }
 .btn {
   display: inline-block;
