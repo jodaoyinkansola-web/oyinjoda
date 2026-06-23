@@ -9,7 +9,6 @@ const sectionLabels = {
   testimonials: 'Testimonials',
   past_work: 'My Work',
   skills: 'Introduction',
-  media: 'My Work',
   contact: 'My Work'
 };
 
@@ -27,7 +26,6 @@ var navHighlight = {
   testimonials:  'testimonials',   /* Highlights "Testimonials" link */
   skills:        'about',   /* ← Also highlights "Testimonials" — change to 'about' if you prefer */
   past_work:   'past_work',      /* Highlights "Past Work" link */
-  media:         'media',          /* Highlights "Media" link */
   contact:       'contact'         /* Highlights "Contact" link */
 };
 
