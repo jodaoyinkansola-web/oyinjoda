@@ -520,7 +520,7 @@ img.work-img-placeholder {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  margin-top: 48px;
+  margin: 100px 0px 100px;
 }
 .media-card {
   background: rgba(255,255,255,0.5);
