@@ -636,7 +636,7 @@ img.work-img-placeholder {
   margin-top: -50px; 
   margin-left: -70px;        /* ← Negative margin pulls it UP into the card — increase to overlap more */
   z-index: 2;                /* Sits on top of the card */
-  background: var(--purple-border);
+  background: var(--purple-deep);
   color: #fff;
   padding: 13px 32px;
   border-radius: 10px;
