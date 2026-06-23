@@ -9,7 +9,7 @@ const sectionLabels = {
   testimonials: 'Testimonials',
   past_work: 'My Work',
   skills: 'Introduction',
-  contact: 'Contact Me'
+  contact: 'Contact'
 };
 
 const observer = new IntersectionObserver((entries) => {
