@@ -67,8 +67,11 @@ nav {
   transition: var(--transition);
   letter-spacing: 0.02em;
 }
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover{
+  background: var(--purple-deep);
+}
+
+.nav-links a.active{
   background: var(--purple-btn);
   border-color: var(--purple-mid);
   color: #fff;
@@ -469,7 +472,7 @@ img.work-img-placeholder {
 }
 
 .work-img-sm{
-  border-radius: 10px;
+  border-radius: 100px;
 }
 
 .work-objective {
