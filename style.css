@@ -633,14 +633,14 @@ img.work-img-placeholder {
   margin-top: -24px; 
   margin-left: -70px;        /* ← Negative margin pulls it UP into the card — increase to overlap more */
   z-index: 2;                /* Sits on top of the card */
-  background: var(--purple-accent);
+  background: var(--pink-accent);
   color: #fff;
   padding: 13px 32px;
   border-radius: 10px;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  transition: var(--pink-accent);
+  transition: var(--transition);
   box-shadow: 0 -4px 20px rgba(124,58,237,0.25);  /* Shadow upward so it looks lifted off the card */
 }
 .resume-download:hover { background: #6d28d9; transform: translateY(-2px); }
