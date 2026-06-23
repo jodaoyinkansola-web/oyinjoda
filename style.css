@@ -74,7 +74,7 @@ nav {
   color: #fff;
 }
 .nav-links a.nav-contact {
-  background: var(--pink-accent);
+  background: var(--purple-deep);
   border-color: var(--white);
 }
 .nav-links a.nav-contact:hover { background: #6d28d9; }
@@ -465,7 +465,7 @@ img.work-img-placeholder {
 }
 
 .work-img-fat{
-  object-position: 100% 12%;
+  object-position: 100% 15%;
 }
 
 .work-img-sm{
