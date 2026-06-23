@@ -630,7 +630,7 @@ img.work-img-placeholder {
   border-style: solid;
   border-width: 2px;
   border-color: var(--pink-border);
-  margin-top: -24px; 
+  margin-top: -35px; 
   margin-left: -70px;        /* ← Negative margin pulls it UP into the card — increase to overlap more */
   z-index: 2;                /* Sits on top of the card */
   background: var(--pink-accent);
