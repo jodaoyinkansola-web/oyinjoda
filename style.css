@@ -608,9 +608,9 @@ img.work-img-placeholder {
 .resume-img {
   width: 100%;
   display: block;
-  border-radius: 5px;
+  border-radius: 10px;
   border-style: solid;
-  border-width: 4px;
+  border-width: 2px;
   border-color: var(--pink-border);
   object-fit: cover;         /* Crops to fill without stretching */
 }
@@ -623,7 +623,7 @@ img.work-img-placeholder {
   border-width: 2px;
   border-color: var(--pink-border);
   margin-top: -24px; 
-  margin-left: -55px;        /* ← Negative margin pulls it UP into the card — increase to overlap more */
+  margin-left: -70px;        /* ← Negative margin pulls it UP into the card — increase to overlap more */
   z-index: 2;                /* Sits on top of the card */
   background: var(--purple-accent);
   color: #fff;
@@ -632,7 +632,7 @@ img.work-img-placeholder {
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  transition: var(--transition);
+  transition: var(--pink-accent);
   box-shadow: 0 -4px 20px rgba(124,58,237,0.25);  /* Shadow upward so it looks lifted off the card */
 }
 .resume-download:hover { background: #6d28d9; transform: translateY(-2px); }
