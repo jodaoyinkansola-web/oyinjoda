@@ -74,7 +74,7 @@ nav {
   color: #fff;
 }
 .nav-links a.nav-contact {
-  background: var(--purple-vivid);
+  background: var(--pink-accent);
   border-color: var(--white);
 }
 .nav-links a.nav-contact:hover { background: #6d28d9; }
