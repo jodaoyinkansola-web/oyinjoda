@@ -464,6 +464,14 @@ img.work-img-placeholder {
   object-position: 100% 0%;
 }
 
+.work-img-fat{
+  object-position: 100% 15%;
+}
+
+.work-img-sm{
+  border-radius: 10px;
+}
+
 .work-objective {
   font-size: 15px;
   line-height: 1.75;
