@@ -86,9 +86,11 @@ function goToSection(index) {
     }, 80); 
   }, 400); 
 }
-
 /* Mouse wheel / trackpad */
 window.addEventListener('wheel', (e) => {
+  // Disable scroll hijacking on mobile devices so it scrolls normally!
+  if (window.innerWidth <= 768) return;
+
   const scrollable = e.target.closest('.media-inner');
   if (scrollable) {
     const isScrollingDown = e.deltaY > 0;
@@ -110,11 +112,17 @@ let touchStartY = 0;
 let touchTarget = null;
 
 window.addEventListener('touchstart', (e) => {
+  // Completely ignore custom touch events on mobile
+  if (window.innerWidth <= 768) return;
+  
   touchStartY = e.touches[0].clientY;
   touchTarget = e.target;
 }, { passive: true });
 
 window.addEventListener('touchend', (e) => {
+  // Completely ignore custom touch events on mobile
+  if (window.innerWidth <= 768) return;
+
   if (isScrolling) return;
   const diff = touchStartY - e.changedTouches[0].clientY;
   if (Math.abs(diff) < 50) return;
