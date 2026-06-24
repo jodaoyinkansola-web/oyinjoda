@@ -55,6 +55,26 @@ const fadeObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 fadeEls.forEach(el => fadeObserver.observe(el));
 
+// ── Mobile Hamburger Menu ──
+const menuToggle = document.getElementById('menu-toggle');
+const navLinksContainer = document.getElementById('nav-links');
+const mobileNavLinks = document.querySelectorAll('.nav-links a');
+
+menuToggle.addEventListener('click', () => {
+  navLinksContainer.classList.toggle('open');
+  menuToggle.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+mobileNavLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      navLinksContainer.classList.remove('open');
+      menuToggle.classList.remove('active');
+    }
+  });
+});
+
 /* ============================================================
    PAGE SNAPPING WITH SWEEP TRANSITION
 ============================================================ */
