@@ -327,13 +327,47 @@ footer { background: var(--dark-nav); color: rgba(255,255,255,0.4); text-align: 
 
 /* ── RESPONSIVE MOBILE FIXES ── */
 @media (max-width: 768px) {
-  /* Tells the browser to offset anchor links by 160px so the tall nav doesn't cover content */
-  html { scroll-padding-top: 160px; }
+  html { scroll-padding-top: 80px; }
 
-  nav { padding: 15px 20px; height: auto; flex-direction: column; gap: 15px; }
-  .nav-links { flex-wrap: wrap; justify-content: center; gap: 8px; }
+  /* ── KILL SWEEP TRANSITION ON MOBILE ── */
+  .page-transition { display: none !important; }
+
+  /* ── MOBILE NAV & DROPDOWN ── */
+  nav { padding: 15px 24px; flex-direction: row; justify-content: space-between; align-items: center; }
+  .menu-toggle { display: flex; }
   
-  /* Pushes section content down so it breathes better natively */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--dark-nav);
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    /* Hidden completely by default */
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: -1; 
+  }
+  
+  /* When javascript adds the "open" class */
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 99;
+  }
+  
+  .nav-links a { text-align: center; font-size: 16px; padding: 14px; }
+  
+  /* Hamburger turning into an X when open */
+  .menu-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .menu-toggle.active span:nth-child(2) { opacity: 0; }
+  .menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  /* ── GENERAL MOBILE ALIGNMENT ── */
   section { justify-content: flex-start; padding-top: 40px; }
   
   .hero-grid, .about-grid, .contact-inner, .testimonials-grid,
@@ -345,15 +379,12 @@ footer { background: var(--dark-nav); color: rgba(255,255,255,0.4); text-align: 
   .hero-photo-wrap::before { top: 10px; bottom: 10px; left: 10px; right: 10px; }
   .section-inner, .work-inner, .media-inner, .testimonials-inner, .hero-grid, .about-grid, .contact-inner { padding: 48px 24px; }
   
-  /* Reset massive paddings on the About Section */
   .about-col:first-child, .about-col:last-child { padding-left: 0; padding-right: 0; text-align: left; }
   .about-col:first-child .about-divider, .about-col:last-child .about-divider { margin-left: 0; margin-right: auto; }
   
-  /* Fix Image Stack Stacking for Mobile */
   .work-img-stack { grid-template-columns: 1fr; grid-template-rows: auto; }
   .work-img-stack :nth-child(1) { grid-column: 1; grid-row: auto; height: 300px; }
   .work-img-stack :nth-child(2), .work-img-stack :nth-child(3) { grid-column: 1; height: 200px; }
   
-  /* Center the resume button on mobile */
   .resume-download { margin-left: 0; margin-top: -20px; display: block; width: fit-content; margin: -25px auto 0; }
 }
