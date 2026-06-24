@@ -92,34 +92,52 @@ function goToSection(index) {
 
   }, 400); /* ← Must match the CSS transition duration in .page-transition */
 }
-
 /* Mouse wheel / trackpad */
 window.addEventListener('wheel', (e) => {
+  // Check if we are scrolling inside the media container
+  const scrollable = e.target.closest('.media-inner');
+  if (scrollable) {
+    const isScrollingDown = e.deltaY > 0;
+    // Math.ceil helps account for fractional pixel scrolling on some monitors
+    const isAtBottom = Math.ceil(scrollable.scrollTop + scrollable.clientHeight) >= scrollable.scrollHeight;
+    const isAtTop = scrollable.scrollTop === 0;
+
+    // If scrolling down and not at the bottom, let it scroll naturally!
+    if (isScrollingDown && !isAtBottom) return; 
+    // If scrolling up and not at the top, let it scroll naturally!
+    if (!isScrollingDown && !isAtTop) return;   
+  }
+
   e.preventDefault();
   if (isScrolling) return;
   goToSection(e.deltaY > 0 ? currentIndex + 1 : currentIndex - 1);
 }, { passive: false });
 
+
 /* Touch swipe (mobile) */
 let touchStartY = 0;
+let touchTarget = null; // Remembers what element you touched
+
 window.addEventListener('touchstart', (e) => {
   touchStartY = e.touches[0].clientY;
+  touchTarget = e.target;
 }, { passive: true });
 
 window.addEventListener('touchend', (e) => {
   if (isScrolling) return;
   const diff = touchStartY - e.changedTouches[0].clientY;
   if (Math.abs(diff) < 50) return;
+
+  // Same check for mobile swipes
+  const scrollable = touchTarget.closest('.media-inner');
+  if (scrollable) {
+    const isSwipingUp = diff > 0; // Swiping up means scrolling down the page
+    const isAtBottom = Math.ceil(scrollable.scrollTop + scrollable.clientHeight) >= scrollable.scrollHeight;
+    const isAtTop = scrollable.scrollTop === 0;
+
+    if (isSwipingUp && !isAtBottom) return;
+    if (!isSwipingUp && !isAtTop) return;
+  }
+
   goToSection(diff > 0 ? currentIndex + 1 : currentIndex - 1);
 }, { passive: true });
-
-/* Nav links and in-page anchor buttons */
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    const index = allSections.indexOf(target);
-    if (index !== -1) goToSection(index);
-  });
-});
-
