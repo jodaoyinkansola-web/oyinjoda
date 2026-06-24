@@ -65,12 +65,27 @@ menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('active');
 });
 
-// Close menu when a link is clicked
-mobileNavLinks.forEach(link => {
-  link.addEventListener('click', () => {
+// ── Handle Nav Clicks (Clean URL & Close Mobile Menu) ──
+const allPageLinks = document.querySelectorAll('.nav-links a, .nav-logo, .hero-cta a');
+
+allPageLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    // 1. Stop the browser from putting "#section" in the URL bar
+    e.preventDefault(); 
+    
+    // 2. Find where the link is trying to go
+    const targetId = link.getAttribute('href'); 
+    const targetSection = document.querySelector(targetId);
+    
+    // 3. Scroll to that section smoothly
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // 4. If on mobile, close the hamburger menu after clicking
     if (window.innerWidth <= 768) {
-      navLinksContainer.classList.remove('open');
-      menuToggle.classList.remove('active');
+      document.getElementById('nav-links').classList.remove('open');
+      document.getElementById('menu-toggle').classList.remove('active');
     }
   });
 });
