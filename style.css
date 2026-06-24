@@ -309,8 +309,14 @@ footer { background: var(--dark-nav); color: rgba(255,255,255,0.4); text-align: 
 
 /* ── RESPONSIVE MOBILE FIXES ── */
 @media (max-width: 768px) {
+  /* Tells the browser to offset anchor links by 160px so the tall nav doesn't cover content */
+  html { scroll-padding-top: 160px; }
+
   nav { padding: 15px 20px; height: auto; flex-direction: column; gap: 15px; }
   .nav-links { flex-wrap: wrap; justify-content: center; gap: 8px; }
+  
+  /* Pushes section content down so it breathes better natively */
+  section { justify-content: flex-start; padding-top: 40px; }
   
   .hero-grid, .about-grid, .contact-inner, .testimonials-grid,
   .skills-list, .work-project, .media-projects {
