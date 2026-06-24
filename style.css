@@ -71,6 +71,24 @@ nav {
 .nav-links a.active { background: var(--purple-btn); border-color: var(--purple-mid); color: #fff; }
 .nav-links a.nav-contact { background: #6d28d9; border-color: var(--white); }
 
+/* ── HAMBURGER BUTTON (Hidden on Desktop) ── */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 101;
+}
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
 /* ── SECTION BASE ── */
 section {
   min-height: 100vh;
